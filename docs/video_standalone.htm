@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, max-age=0, must-revalidate">
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+ 
+<script src="https://cdn.jsdelivr.net/gh/jquery/jquery@latest/dist/jquery.min.js"></script>
+
+
+<style>
+body{}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(e){
+	console.log( "DOMContentLoaded" );
+	var bb=document.querySelector("body");
+	//console.log(bb);
+});
+
+$(function(){});
+$(()=>{
+	console.log('jq');
+  //
+  $.gg=[];
+  //
+  //poi();
+  //poi2();
+  //poi191022();
+  poi211127();
+});
+
+function poi211127(){
+var jqxhr = $.ajax({
+  url: "./-.txt",
+});
+jqxhr.done(function(x1,x2,x3){//data, textStatus, jqXHR
+  console.log( 'jqxhr.done' ); 
+  poi191022b( x1 );
+});
+jqxhr.fail(function(x1,x2,x3){// jqXHR, textStatus, errorThrown
+  console.log( 'jqxhr.fail' ); 
+  $('#ddd').append('獲取失敗');
+});
+jqxhr.always(function(x1,x2,x3){ //data|jqXHR, textStatus, jqXHR|errorThrown
+  console.log( 'jqxhr.always' );
+});
+
+}
+
+//舊版
+function poi191022(){
+	//console.log( 'poi191022()' );
+	var xhr = new XMLHttpRequest();
+	xhr.open("GET",qy[2]+"./list/-.txt", true);
+	xhr.onreadystatechange = function(){
+	  if(xhr.readyState==4){
+		if(xhr.status==200){
+			allText = xhr.responseText;
+			//console.log( allText );
+			poi191022b( allText );
+		}
+	  }
+
+	};
+	xhr.send();
+}//poi191022()
+
+function poi191022b( str ){
+	//console.log( 'poi191022b()' );
+	console.log( str );
+	//var str='';
+	str = str.replace(/\r\n/g, "\n");
+	str = str.split("\n"); //以行分割
+	var FFF='';
+	str.forEach(function(item,index) {
+		//FFF=item.split("."); //以行分割
+		//console.log( FFF );
+		// includes endsWith startsWith
+		//console.log( item,index );
+		item=item.toLowerCase();
+		var chk=false;
+		item=item.trim();
+		var aa=item.endsWith(".webm");
+		if(aa){chk=true;}
+		var aa=item.endsWith(".mp4");
+		if(aa){chk=true;}
+		var aa=item.endsWith(".mkv");
+		if(aa){chk=true;}
+
+		//console.log( item,chk );
+		
+		if(chk){
+			//沒事
+		}else{
+			str[index]='';//變成空行
+		}
+	});//forEach
+	
+	str=str.filter(function(element){
+		return (element.length>0); //排除空行
+	});
+	//console.log( str );
+	var FFF='';
+	str.forEach(function(element) {
+		poi(''+element);
+	});
+}//poi191022b( str )
+
+function poi2(){ //沒用到 191022
+/*
+js 樣板字面值（Template literals）
+*/
+var str=`
+
+aa (1).webm
+
+`;
+	str=str.split("\n");
+	//typeof element
+	str=str.filter(function(element){
+		return (element.length>0);
+	});
+	str.forEach(function(element) {
+		poi(''+element);
+	});
+
+	//console.log(str);
+	//poi();
+}
+
+function poi(input_var){
+//https://raw.githubusercontent.com/wotupset/2021/211003new/11/04/list2/-.txt
+//image.htm?m~11!d~04
+var FFF='./'+input_var;
+
+var str=`
+<video width="300" height="300" controls preload="metadata" src="${FFF}">
+</video>
+
+`;
+//
+	//console.log(str);
+	$('#ddd').append(str);
+}
+
+</script>
+
+</head>
+<body>
+<div id="ddd"></div>
+</body>
+</html>

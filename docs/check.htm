@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, max-age=0, must-revalidate">
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+ 
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+
+<style>
+body{}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(e){
+	console.log( "DOMContentLoaded" );
+	var bb=document.querySelector("body");
+	//console.log(bb);
+});
+
+$(function(){});
+$(()=>{
+	console.log('jq');
+	poi211105();
+});
+
+function poi211105(){
+	$('#ddd1').css({
+		'display':'inline-block',
+		'width':'100px',
+		'vertical-align':'top',
+		'border':'1px solid black',
+		'backgroundColor': '',
+	});
+	$('#ddd2').css({
+		'display':'inline-block',
+		'width':'100px',
+		'vertical-align':'top',
+		'border':'1px solid black',
+		'backgroundColor': '',
+	});
+
+	$('#ddd1').html('');
+	for(i = 1; i <= 12; i++) {
+		var FFF=''+i;
+		if(FFF<10){
+			FFF='0'+FFF;
+		}
+		$('#ddd1').append('<div class="box1" id="m'+FFF+'">'+FFF+'</div>');
+		//$('#m'+FFF+'').append('aa');
+		//
+	}//for
+
+	var f01 = function(in1){
+		//console.log( 'f01' );
+		in1.css({
+			'display':'block',
+			'width':'100px',
+			'height':'50px',
+			'border':'1px solid black',
+			'white-space':'nowrap',
+			'overflow':'visible',
+			'backgroundColor': '',
+		});
+	};//fnc
+	f01( $('.box1') );
+
+
+
+	$('.box1').click(function(e){
+		f01( $('.box1') );
+		//console.log( this );
+		//console.log( e );
+		//$(this).append('c');
+		$(this).css({
+			'border':'1px solid red',
+			'backgroundColor': '#ffff00',
+		});
+		var FFF=$(this).text();
+		//console.log( FFF );
+		$('body').attr('poi_m',FFF);
+		poi211105b( FFF );
+		
+	});
+
+}//poi211105
+
+function poi211105b(in1){
+	var FFF=in1;
+	//
+	var FFF=Math.random();
+	var url='https://raw.githubusercontent.com/wotupset/2023/newyear230101/' +in1+ '/list.txt';
+	//手動輸入的list.txt
+	var f02 = function(in1){
+/*
+		var jqXHR=$.ajax({url: url,cache:false});
+		//.then(function(a,b,c){console.log( a,b,c );});
+
+*/
+		var jqXHR=$.get( url,{ "_": $.now() }, function( data,a,b ) { 
+			//帶有參數的網址 避免cache
+			//console.log( data,a,b );
+		});
+		
+		jqXHR.done(function(data,a,b){
+			console.log( 'jqXHR.done' );
+			//console.log( data,a,b );
+			poi211105c( data );
+		});
+		jqXHR.fail(function(data,a,b){
+			console.log( 'jqXHR.fail' );
+		});
+		jqXHR.always(function(data,a,b){
+			console.log( 'jqXHR.always' );
+		});
+	};
+	f02( FFF );
+
+
+}//poi211105b
+function poi211105c(in1){
+	console.log( 'poi211105c' );
+	var str=in1;
+	//
+	str = str.replace(/\r\n/g, "\n");
+	str = str.split("\n"); //以行分割
+	var FFF='';
+	//console.log( str );
+	str.forEach(function(item,index){
+		//console.log( item,index );
+		str[index]=item.trim();//$.trim()
+	});//去除頭尾空白
+	//console.log( str );
+	str=str.filter(function(item,index){
+		var found = item.match( /^[0-9]{2,2}$/ );
+		//console.log( found );
+		if(found){return true;}
+	});//限制數字2位
+	//console.log( str );
+	str=str.filter(function(item,index){
+	  //console.log( item,index );
+	  var found = str.indexOf( item );
+	  //console.log( found );
+	  if(found == index){return 1;}
+	  //console.log( found );
+	});//不重複
+	//console.log( str );
+	
+	$('#ddd2').html('');
+	var mm=$('body').attr('poi_m');
+	str.forEach(function(element,index) {
+		var FFF=element;
+		var str='';
+		str=str+'<div class="box2" id="d'+FFF+'">';
+		str=str+''+FFF+' ';
+		str=str+'<a href="https://wotupset.github.io/2023/video.htm?m~'+mm+'!d~'+FFF+'">video.htm</a> ';
+		str=str+'<a href="https://wotupset.github.io/2023/image.htm?m~'+mm+'!d~'+FFF+'">image.htm</a> ';
+		str=str+'<a href="https://wotupset.github.io/2023/twitter.htm?m~'+mm+'!d~'+FFF+'">twitter.htm</a> ';
+		str=str+'</div>';
+		$('#ddd2').append( str );
+	});
+	var f01 = function(in1){
+		//console.log( 'f01' );
+		in1.css({
+			'display':'block',
+			'width':'100px',
+			'height':'50px',
+			'border':'1px solid black',
+			'white-space':'nowrap',
+			'overflow':'visible',
+			'backgroundColor': '',
+		});
+	};//fnc
+	f01( $('.box2') );
+	
+	
+}
+
+</script>
+
+</head>
+<body>
+<div id="ddd1">1</div>
+<div id="ddd2">2</div>
+</body>
+</html>

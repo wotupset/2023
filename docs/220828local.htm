@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, max-age=0, must-revalidate">
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+ 
+<script src="https://cdn.jsdelivr.net/gh/jquery/jquery@latest/dist/jquery.min.js"></script>
+
+<style>
+body{}
+
+dl div:nth-child(odd){
+	background-color:#CCFFFF;
+}
+#poi220828submit {
+    width: 100px;
+    height: 50px;
+}
+
+</style>
+
+<script>
+
+//1
+document.addEventListener("DOMContentLoaded",function(e){
+	console.log( "DOMContentLoaded" );
+	var bb=document.querySelector("body");
+	//console.log(bb);
+});
+
+try{
+    $(document).ready(function(){
+		poi();
+    });
+}catch(err){
+    //console.log( err );
+    console.log( err.message );
+    throw '錯誤';
+}finally{
+	//console.log( 'try' );
+}
+
+//2
+function poi(){
+	//
+	$.gginin={'poi220828':0};
+	//
+	if(window.localStorage){
+		//console.log( window.localStorage );
+		poi2();//讀取
+		poi3();//寫入
+		poi4();//清空
+		poi5();//清單
+		//poi5b();//清單
+		//poi6();//輸出字串
+		poi6b();//輸出字串
+	}
+
+}//
+
+function poi6b(){
+    $("#poi220828output").click(function(){
+		poi6();
+	});
+}
+
+function poi6(){
+	console.log( '輸出字串' );
+	//
+	var FFF='';
+	FFF=$('#poi220828box').html();
+	console.log( FFF );
+	str_all=FFF.replace(/\</g,'&lt;');
+	//
+	$('#poi220828box').text('');
+	$('#poi220828box').append( str_all );
+	//
+	return 0;
+}
+
+
+function poi5b(){
+	//清單 //沒用到
+    $("#poi220828list").click(function(){
+		poi5();
+	});
+}
+
+function poi5(){
+	console.log( '清單' );
+	var json=window.localStorage.poi220828;
+	//console.log( json );
+	json = JSON.parse( json );//字串轉obj
+	//console.log( json );
+	//
+	$('#poi220828box').text('');
+/*
+.html() :讀取和修改一個元素的HTML內容，詳情.html()；
+.text()：讀取和修改一個元素的文本內容，詳情.text()；
+.val()：讀取和修改一個表單元素的value字段值，詳情.val()。
+*/
+	$.each( json , function( index, value ) {
+		console.log( index , value );
+		var str='';
+		//
+		//str=value.時間;
+		//str='' + str +'<br/>';//⏬
+		//$('#poi220828box').append(str);
+		//
+		str=value.內文;
+		str=str.replace(/\n/g,'<br/>');
+		str='⏭️'+str+'<br/>📌<br/>'
+		//$('#poi220828box').append(str);
+		$('#poi220828box').prepend(str);
+		
+		//
+	});
+	
+}
+function poi4(){
+	//清空
+    $("#poi220828clear").click(function(){
+		window.localStorage.poi220828='[]';
+		//$.gginin.poi220828='';
+		poi5();
+	});
+}
+function poi3(){
+	
+    $("#poi220828submit").click(function(){
+        console.log( '寫入' );
+		var json=window.localStorage.poi220828;
+		json = JSON.parse( json );//字串轉obj
+		console.log( '剛讀檔的json',json );
+		//
+		var ary;
+		ary={
+            時間: new Date() ,
+            內文: $('#poi220828text').val() ,
+        };
+		//後輟: '📌' ,
+		json.push( ary );
+		console.log( json );
+		window.localStorage.poi220828= JSON.stringify( json ) ;//json轉成字串 存入localStorage
+		console.log( window.localStorage );
+		//
+		$('#poi220828text').val('');
+		//
+		poi5();
+
+    });
+}
+
+function poi2(){
+	console.log( '讀取' );
+  //var json_array=[0,1,'ㄎ<">ㄎ',"o!@#$%^&oㄏ'ㄏ"];
+  //var json_str=JSON.stringify(json_array); //建立json字串
+  //console.log(json_str);
+  //window.localStorage.poi220828=json_str;
+  //window.localStorage.poi220828="[]";
+  //window.localStorage.poi220828='';
+  //localStorage.removeItem('poi220828');//移除localStorage項目
+
+  console.log( window.localStorage );
+  
+  FFF=window.localStorage.poi220828;
+  //console.log( FFF );
+  if(window.localStorage.length==0){
+	console.log( 'yy' );
+	localStorage.setItem('poi220828', '[]');//新增localStorage項目
+  }
+  console.log( window.localStorage );
+  
+  //$.gginin.poi220828=JSON.parse( window.localStorage.poi220828 );//解析json字串
+  //console.log($.gginin.poi220828);//obj
+  
+}
+
+
+</script>
+
+
+</head>
+<body>
+<div style="display:inline-block;vertical-align:top;" >
+<textarea name="text" id="poi220828text" cols="48" rows="10" wrap=soft placeholder="內文"></textarea>
+</div>
+
+<div style="display:inline-block;vertical-align:top;" >
+<input type="submit" id="poi220828submit" value="送出"/>⚜
+
+</div>
+
+
+<div style="display:inline-block;vertical-align:top;" >
+<input type="submit" id="poi220828clear" value="清空"/>⚜
+</div>
+
+
+
+<div style="display:inline-block;vertical-align:top;" >
+<input type="submit" id="poi220828output" value="輸出字串"/>⚜
+</div>
+
+<hr id='poi220828hr'/>
+<div id="poi220828box"></div>
+
+
+</body>
+</html>
