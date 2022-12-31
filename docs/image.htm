@@ -11,7 +11,9 @@
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 
 <style>
-body{}
+img {
+background-color:gray;
+}
 </style>
 
 <script>
@@ -166,7 +168,7 @@ function poi(in1,in2){
 //image.htm?m~11!d~04
 var FFF=qy[2]+'./image/'+in1;
 var str=`
-<img width="300" height="300" src="${FFF}" alt="圖片${in2}" title="圖片${in2}" />
+<img width="300" height="300" src="${FFF}" title="圖片${in2}" />
 `;
 	//console.log(str);
 	$('#ddd').append(str);
