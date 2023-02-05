@@ -6,7 +6,7 @@
 # 05
 <img src="https://files.gitter.im/588068efd73408ce4f448ac2/LjEz/230204_FoF9xi0aQAAV-eA.jpg" width="360" height="auto">
 <img src="https://user-images.githubusercontent.com/4385327/216819115-10970cdb-b7e0-4284-a799-21c8ffd9d5f1.jpg" width="360" height="auto">
-<img src="https://files.gitter.im/588068efd73408ce4f448ac2/CFLD/230204_FWLSRNIVUAAMoIu.jpg" width="360" height="auto">
+<img src="https://files.gitter.im/588068efd73408ce4f448ac2/tkN6/230204_FeJN2wKaMAA4mfd.jpg" width="360" height="auto">
 <img src="https://files.gitter.im/588068efd73408ce4f448ac2/tszN/230205_FoJRKNjWIAAJgLn-1-.jpg" width="360" height="auto">
 
 # 02
