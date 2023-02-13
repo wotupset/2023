@@ -3,6 +3,12 @@
 <img src="" width="360" height="auto">
 
 # ==
+# 13.2
+<img src="https://user-images.githubusercontent.com/4385327/218507335-2e8299c3-a8c8-4324-859f-23d577834738.jpg" width="360" height="auto">
+<img src="https://user-images.githubusercontent.com/4385327/218507345-719aad09-72a6-4efe-b3d1-cd2c608ad69a.jpg" width="360" height="auto">
+<img src="https://user-images.githubusercontent.com/4385327/218507948-e1c88e43-b9d8-490e-b0a0-e4306f1f6643.jpg" width="360" height="auto">
+<img src="https://user-images.githubusercontent.com/4385327/218507962-e3997b6a-5551-4fac-84b0-5bde48ebd476.jpg" width="360" height="auto">
+
 # 13
 <img src="https://user-images.githubusercontent.com/4385327/218497211-43f2f4fc-24c9-4d1c-aec8-d5028dbf845d.jpg" width="360" height="auto">
 <img src="https://user-images.githubusercontent.com/4385327/218497813-b3daaa82-bb0f-4825-a77b-02b82b1cd68f.jpg" width="360" height="auto">
