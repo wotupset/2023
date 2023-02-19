@@ -5,6 +5,8 @@ https://wotupset.github.io/2023/
 https://raw.githubusercontent.com/wotupset/2023/newyear230101/221231_FlUJYnjaYAA7XhY.jpg
 https://github.com/wotupset/2023/raw/newyear230101/221231_FlUJYnjaYAA7XhY.jpg
 
+<img src="" width="360" height="auto">
+
 # 123
 <img src="https://files.gitter.im/61d956256da03739848ddd27/4Stg/Fk-JpmpakAEePvD.jpg" width="360" height="auto">
 <img src="https://files.gitter.im/61d956256da03739848ddd27/YzBt/Fk-DzQ8aMAALrpe.jpg" width="360" height="auto">
@@ -23,3 +25,5 @@ https://github.com/wotupset/2023/raw/newyear230101/221231_FlUJYnjaYAA7XhY.jpg
 貴種流離譚（きしゅりゅうりたん）とは、物語の類型の一種であり、折口学の用語の一つ。若い神や英雄が他郷をさまよいながら試練を克服した結果、尊い存在となるとする説話の一類型[1]。
 折口信夫が一連の「日本文学の発生」をめぐる論考のなかで、日本における物語文学（小説）の原型として論じた概念である。
 その説くところは時期によって細部が異なるが、基本的には「幼神の流浪」をその中核に据える。
+
+<img src="https://user-images.githubusercontent.com/4385327/216748468-c361c14b-92d3-4dec-841e-3092b1140d4e.jpg" width="360" height="auto">
