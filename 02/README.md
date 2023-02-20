@@ -6,7 +6,9 @@
 # 20
 <img src="https://cdn.discordapp.com/attachments/453967520299483156/1077218706259710062/230220_FpT84W3aUAUm1ar.jpg" width="360" height="auto">
 <img src="https://cdn.discordapp.com/attachments/453967520299483156/1077218705320185916/230220_FpT852haYAE-W59.jpg" width="360" height="auto">
+<img src="https://cdn.discordapp.com/attachments/453967520299483156/1077221049776746516/230220_FpTkMolaAAElmC_.jpg" width="360" height="auto">
 <img src="https://cdn.discordapp.com/attachments/453967520299483156/1077218704850436207/230220_FpT86dUaIAE-sZH.jpg" width="360" height="auto">
+<img src="https://cdn.discordapp.com/attachments/453967520299483156/1077221050124881920/230220_FpTkNKqaAAANXSH.jpg" width="360" height="auto">
 
 # 20b
 <img src="https://cdn.discordapp.com/attachments/453967520299483156/1077218033396883527/230220_FpKphqFaUAAzA-P.jpg" width="360" height="auto">
