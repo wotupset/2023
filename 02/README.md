@@ -11,6 +11,7 @@
 # 20b
 <img src="https://cdn.discordapp.com/attachments/453967520299483156/1077218033396883527/230220_FpKphqFaUAAzA-P.jpg" width="360" height="auto">
 <img src="https://cdn.discordapp.com/attachments/453967520299483156/1077217803330932786/230220_FpTOd_XXgAQbiZI.jpg" width="360" height="auto">
+<img src="https://cdn.discordapp.com/attachments/453967520299483156/1077219387657953340/230220_FpO-h6PaQAAQqZJ.jpg" width="360" height="auto">
 
 # 15.2
 <img src="https://user-images.githubusercontent.com/4385327/219263555-080c2770-309a-4fbe-8a73-9f27ce315686.jpg" width="360" height="auto">
