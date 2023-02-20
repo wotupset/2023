@@ -11,6 +11,7 @@
 <img src="https://cdn.discordapp.com/attachments/453967520299483156/1077221050124881920/230220_FpTkNKqaAAANXSH.jpg" width="360" height="auto">
 
 # 20b
+<img src="https://cdn.discordapp.com/attachments/453408537217990656/1077222381287907489/Konachan.com_-_258450_2girls_aqua_eyes_azur_lane_breasts_choker_cleavage_foxgirl_gloves_kimono_long_hair_red_eyes_ribbons_sky_snow_tail_tree_umbrella_white_hair_winter.jpg" width="360" height="auto">
 <img src="https://cdn.discordapp.com/attachments/453967520299483156/1077218033396883527/230220_FpKphqFaUAAzA-P.jpg" width="360" height="auto">
 <img src="https://cdn.discordapp.com/attachments/453967520299483156/1077217803330932786/230220_FpTOd_XXgAQbiZI.jpg" width="360" height="auto">
 <img src="https://cdn.discordapp.com/attachments/453967520299483156/1077219387657953340/230220_FpO-h6PaQAAQqZJ.jpg" width="360" height="auto">
