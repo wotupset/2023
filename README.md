@@ -27,3 +27,6 @@ https://github.com/wotupset/2023/raw/newyear230101/221231_FlUJYnjaYAA7XhY.jpg
 その説くところは時期によって細部が異なるが、基本的には「幼神の流浪」をその中核に据える。
 
 <img src="https://user-images.githubusercontent.com/4385327/216748468-c361c14b-92d3-4dec-841e-3092b1140d4e.jpg" width="360" height="auto">
+
+# 地球上的一切才是一場夢
+<img src="https://user-images.githubusercontent.com/4385327/220142700-4e0af92a-17ee-417a-9ce1-e1c6d9deb168.jpg" width="360" height="auto">
