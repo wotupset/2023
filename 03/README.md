@@ -4,7 +4,7 @@
 
 # ==
 # 05.2
-
+<img src="https://user-images.githubusercontent.com/4385327/222940607-b4912870-79c0-4dea-af84-d0712bbc3972.jpg" width="360" height="auto">
 <img src="https://user-images.githubusercontent.com/4385327/222938776-e75c9fac-769a-4e0c-b28d-6b738052d8b5.jpg" width="360" height="auto">
 <img src="https://user-images.githubusercontent.com/4385327/222938775-0b06f9d5-803e-47f3-8ce7-7e076482bfdc.jpg" width="360" height="auto">
 <img src="https://user-images.githubusercontent.com/4385327/222938772-c1d24f95-4794-461d-82ac-3df449dc9826.jpg" width="360" height="auto">
