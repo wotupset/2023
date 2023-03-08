@@ -40,4 +40,4 @@ https://github.com/wotupset/2023/raw/newyear230101/221231_FlUJYnjaYAA7XhY.jpg
 
 # 終末なにしてますか？忙しいですか？救ってもらっていいですか？
 終末なにしてますか？ もう一度だけ、会えますか？
-
+https://youtu.be/ZGfC2boki-I
