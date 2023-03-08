@@ -39,5 +39,5 @@ https://github.com/wotupset/2023/raw/newyear230101/221231_FlUJYnjaYAA7XhY.jpg
 <img src="https://user-images.githubusercontent.com/4385327/222919675-dc0d46da-4aa9-498c-93e2-31ed9c87fc46.jpg" width="360" height="auto">
 
 # 終末なにしてますか？忙しいですか？救ってもらっていいですか？
-《末日時在做什麼？有沒有空？可以來拯救嗎？》
+終末なにしてますか？ もう一度だけ、会えますか？
 
