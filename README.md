@@ -7,6 +7,8 @@ https://github.com/wotupset/2023/raw/newyear230101/221231_FlUJYnjaYAA7XhY.jpg
 
 <img src="" width="360" height="auto">
 
+<img src="https://raw.githubusercontent.com/wotupset/2023/274c28d940a846da61859927fa8548667552b6a5/221231_FlUJYnjaYAA7XhY.jpg" width="360" height="auto">
+
 # 123
 <img src="https://files.gitter.im/61d956256da03739848ddd27/4Stg/Fk-JpmpakAEePvD.jpg" width="360" height="auto">
 <img src="https://files.gitter.im/61d956256da03739848ddd27/YzBt/Fk-DzQ8aMAALrpe.jpg" width="360" height="auto">
