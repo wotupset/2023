@@ -1,0 +1,432 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>💬title</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, max-age=0, must-revalidate">
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+
+<style>
+img {
+
+}
+</style>
+
+<script>
+window.gg=[]; //globalVar
+
+document.addEventListener("DOMContentLoaded",function(e){
+
+	var hh=human_date(window.time);
+	//console.log( hh );
+	
+	//取得hash的網址字串
+	var url='';
+	url=window.location;
+	//console.log( url.hash );
+	url=url.hash.substr(1);
+	//console.log( url );
+	
+    if(url.search('format') > 0){
+      console.log( 'AAA' );
+	  //https://pbs.twimg.com/media/ETCnWdLUwAAzJWF?format=jpg&name=orig
+      var url = new URL( url );
+      var urlhash_format =url.searchParams.get('format');
+      var urlhash_name   =url.searchParams.get('name');
+    }else{
+      console.log( 'BBB' );
+	  //https://pbs.twimg.com/media/ETCnWdLUwAAzJWF.jpg:orig
+      var url = new URL( url );
+      str=url.href;
+      var FFF='';
+      FFF=str.lastIndexOf('.');
+      FFF=str.substr(0,FFF);
+      //console.log( FFF );
+      var 前段網址 = FFF;
+      FFF=str.lastIndexOf('.');
+      FFF=str.substr(FFF+1);
+      FFF=FFF.split(':'); //字元分割 
+      //console.log( FFF );
+      var 參數format = FFF[0];
+      var 參數name = FFF[1];
+      
+      //console.log( 前段網址,參數format,參數name );
+      url = new URL( 前段網址 );
+      console.log( url );
+      url.searchParams.set('format',參數format);
+      url.searchParams.set('name',參數name);
+      var urlhash_format =url.searchParams.get('format');
+      var urlhash_name   =url.searchParams.get('name');
+    }
+
+	//url.searchParams.set('name','orig');
+	url.searchParams.set('name','large');
+	url.searchParams.set('format','jpg');
+	console.log( url );//https://pbs.twimg.com/media/ETCnWdLUwAAzJWF?format=jpg&name=orig
+
+
+
+    var FFF='';
+    FFF=FFF+url.origin;
+    FFF=FFF+url.pathname;
+    //FFF=FFF+'.';
+	FFF=FFF+'?format=';
+    FFF=FFF+url.searchParams.get('format');
+	FFF=FFF+'&name=';
+	FFF=FFF+url.searchParams.get('name');
+    console.log( FFF );
+	
+    var url_str='';
+    url_str=FFF;    
+    console.log( url_str );
+	//https://pbs.twimg.com/media/D2dEk64UgAA8hbB.jpg?format=jpg&name=large
+	
+	var nn=url.pathname.split("\/")[2];
+    //console.log( nn );//ETCnWdLUwAAzJWF
+	//nn=human_date(window.time)+'_'+nn+'.jpg';
+	nn=human_date(window.time)+'_'+nn+'.'+urlhash_format;
+	
+	//return 0;
+	
+/*	
+    //console.log( nn );//20200319235636_ETCnWdLUwAAzJWF_orig_q90.jpg
+	//var url=''+new_url+':orig';
+	//window.gg.url=url;
+	
+	url=url_str+":large";
+	//url='https://images.weserv.nl/?url='+url+'&output=jpg&q=85&filename='+nn+'&w=2048&h=2048&fit=inside&we';
+	//url=url.href;//https://pbs.twimg.com/media/ETCnWdLUwAAzJWF?format=jpg&name=orig
+    console.log( url );
+	//url='http://demo.cloudimg.io/cdno/n/q90.tjpg/'+url;//品質90的jpg
+	//url='https://images.weserv.nl/?url='+url+'&output=jpg&q=90';//品質90的jpg
+	//
+*/
+    console.log( url );
+	//URL {origin: 'https://pbs.twimg.com', protocol: 'https:'
+	window.gg.url=url;
+    //console.log( window.gg.url );
+
+	//return;
+	
+	poi230728(url);
+	
+
+});//DOMContentLoaded
+
+
+
+function poi230728(in1){
+	var url=in1;
+	//
+	var nn=url.pathname.split("\/")[2];
+	var urlhash_format =url.searchParams.get('format');
+	var urlhash_name =url.searchParams.get('name');
+	nn=human_date(window.time)+'_'+nn+'_'+urlhash_name+'.'+urlhash_format;
+	console.log( 'nn',nn );
+    
+	//
+ 
+  //
+	var xhr = new XMLHttpRequest();
+	xhr.onload = function(e){
+		console.log( 'xhr.onload' );
+	};
+	xhr.ontimeout = function(e){
+		console.log( 'xhr.ontimeout' );
+		var aa = document.getElementById('img01');
+		var str='timeout';
+		aa.insertAdjacentHTML('afterend', '<br/>'+str);
+	};
+	xhr.onerror = function(e){
+		console.log( 'xhr.onerror' ,e);
+	};
+
+	xhr.onstalled = function(e){
+		console.log( 'xhr.onstalled' ,e);
+	};
+	xhr.onabort = function(e){
+		console.log( 'xhr.onabort' ,e);
+	};
+	xhr.onsuspend = function(e){
+		console.log( 'xhr.onsuspend' ,e);
+	};
+	
+
+	
+	xhr.onloadstart = function(e){
+		console.log( 'xhr.onloadstart' );
+	};
+	xhr.onprogress = function(e){
+		console.log( 'xhr.onprogress' );
+		var aa=0.0+(e.loaded / e.total);
+		aa= (aa * 100);
+		//var a1 = Math.floor( aa );
+		//var bb=aa.toString();//
+		//var cc=bb.split('.');
+		//bb=bb.substr(0,4);
+		//var aa2=Math.floor(aa);整數
+		var aa3 = aa.toFixed(2);//取小數2位
+		var new_aa='';
+		new_aa=''+aa3+'%';
+		//new_aa=Number(new_aa);
+		console.log( new_aa );
+	    var ee = document.querySelector("#poi200129");
+		document.title=new_aa;
+		ee.innerHTML=new_aa;
+		
+		
+	};
+	
+	xhr.onreadystatechange = function(e){
+		//console.log(e,this,this.readyState, this.status);
+		if(this.readyState == 1){
+			console.log('open');
+		}
+		if(this.readyState == 2){
+			console.log('send');
+		}
+		if(this.readyState == 3){
+			console.log('load');
+			//console.log( this );
+		}
+		if(this.readyState == 4){
+			//
+			if( this.status == 200 ){
+				console.log( this.getAllResponseHeaders() ); //simple response header 
+				//console.log(this.response, typeof this.response);
+				//console.log(nn);
+				//console.log( this.response.size );
+				gg.human_size=human_size( this.response.size );
+				console.log( gg.human_size );
+				
+				var img = document.getElementById('img01');
+				//document.getElementById("xyz").setAttribute('style','padding-top:10px');
+				img.addEventListener("click", function(){
+					//console.log( this.alt );
+					//console.log( this.getAttribute('alt') );
+					
+					if( this.alt =='a1' ){
+						this.setAttribute('alt','a2');
+						this.setAttribute('style','display:block;');
+					}else{
+						this.setAttribute('alt','a1');
+						//this.setAttribute('style','display:block;max-width:100%;border:2px blue solid;margin:0px;');
+						this.setAttribute('style','display:block;max-width:640px;width:auto;max-height:640px;height:auto;border:2px blue solid;margin:0px;');
+						
+					}
+				});
+
+				img.onload = function(e){
+					//console.log(e);
+					var str='';
+					str=str+img.naturalWidth+'x'+img.naturalHeight+'🌊';
+					str=str+gg.human_size+'🌊';
+					str=str+nn+'🌊';
+					//console.log(str);
+					img.insertAdjacentHTML('beforebegin', str+'<br/>');
+					img.insertAdjacentHTML('afterend', '<br/>'+window.gg.url);
+					//+'<img src="'+window.gg.url+'"/>'
+					document.title=''+str;
+					var xx = document.getElementById('img02');
+					xx.src=window.gg.url;
+					xx.style='display:block;max-width:250px;width:auto;max-height:250px;height:auto;border:2px blue solid;margin:0px;background-color:gray;';
+					xx.title="titletitle";
+					xx.alt="altalt";
+					//console.log(xx.style);
+					//background-color:gray;
+					var aa = document.getElementById('aa01');
+					aa.style='';
+					aa.href = img.src;
+					aa.download=''+nn;
+					aa.click();
+
+				};
+				img.src = window.URL.createObjectURL(this.response);
+				img.title="blob img";
+
+				//img.src = "http://ram.komica2.net/00/src/1607180737393.jpg";
+				console.log( img.src );
+
+			}else{
+				console.log( this.status );
+				var aa = document.getElementById('img01');
+				var str='失敗'+this.status;
+				aa.insertAdjacentHTML('afterend', '<br/>'+str);
+				
+			}//if //this.status
+		}//if
+		
+	}//xhr
+	console.log(xhr.readyState);//0
+	//console.log( xhr.timeout );//0
+	xhr.timeout = 60*1000;
+	//console.log( xhr.timeout );//0
+	
+	xhr.open('GET', url);
+	xhr.responseType = 'blob';
+	xhr.send();      
+}
+
+
+
+
+
+
+
+
+function poi190410(){
+	window.time=new Date();//可讀時間
+	window.gg=[]; //globalVar
+	//
+	gg.date=time;
+	gg.dateLocale=time.toLocaleString();
+	gg.dateISO=time.toISOString();
+	gg.dateUTC=time.toUTCString();
+	gg.Timezone=time.getTimezoneOffset();
+	gg.timestamp=time.getTime();//Date.now();//new Date().getTime();
+	gg.timestampUTC=time.getTime() - time.getTimezoneOffset()*60*1000;
+	//gg.timestampUTC=Date.parse( gg.dateUTC );
+	console.log( gg );
+	
+	var aa= [
+	  time.getFullYear(),
+	  time.getMonth()+1,
+	  time.getDate(),
+	  time.getHours(),
+	  time.getMinutes(),
+	  time.getSeconds(),
+	];
+
+	var aaUTC= [
+	  time.getUTCFullYear(),
+	  time.getUTCMonth()+1,
+	  time.getUTCDate(),
+	  time.getUTCHours(),
+	  time.getUTCMinutes(),
+	  time.getUTCSeconds(),
+	];
+	//console.log( aa );
+	//console.log( aaUTC );
+}
+
+
+
+
+function human_size(xx){
+	var str='';
+	str='bytes';
+	if( xx>1024 ){ xx=(xx/1024);str='KB'; }
+	if( xx>1024 ){ xx=(xx/1024);str='MB'; }
+	if( xx>1024 ){ xx=(xx/1024);str='GB'; }
+	xx=xx.toFixed(2);
+
+	return ''+xx+str;
+}
+function human_date(){
+	//poi190410();//??
+	let xx=new Date();//可讀時間
+	//
+	var time=xx;
+	var dd= [
+		time.getFullYear(),
+		time.getMonth()+1,
+		time.getDate(),
+		time.getHours(),
+		time.getMinutes(),
+		time.getSeconds(),
+	];
+	//console.log( dd );
+
+	dd.forEach(function(item,index){
+		var aa= item.toString().length;
+		//console.log( aa );
+		//console.log(item,index);
+		if( 0<aa && aa<2 ){
+		dd[index]='0'+item;
+		}else{
+		dd[index]=''+item;
+		}
+	});//forEach
+	dd[0]=dd[0].substr(2,2);
+	//console.log( dd );
+
+	//xx
+	//xx=dd.join('');
+	//xx=dd[0]+dd[1]+dd[2]+'-'+dd[3]+dd[4]+dd[5]; //yymmdd-hhiiss
+	xx=dd[0]+dd[1]+dd[2]; //yymmdd
+	//xx=dd[0]+'-'+dd[1]+dd[2];
+	//console.log( xx );
+	return ''+xx;
+}
+
+
+
+
+/*
+$(document).ready(function(){
+  var url='https://pbs.twimg.com/media/Dv6TGrKU8AALiBt.jpg';
+  $('#iframe01').attr('src',url);
+});
+
+*/
+
+/*
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function(){
+    if (this.readyState == 4 && this.status == 200){
+      console.log(this.response, typeof this.response);
+      var img = document.getElementById('img01');
+      img.src = window.URL.createObjectURL(this.response);
+      var aa = document.getElementById('aa01');
+      aa.href = window.URL.createObjectURL(this.response);
+      aa.download='download.jpg';
+      aa.click();
+    }
+  }
+  xhr.open('GET', url);
+  xhr.responseType = 'blob';
+  xhr.send();      
+
+*/
+/*
+  var ajax01=$.ajax({
+    url: url,
+    xhrFields:{
+      responseType: 'blob'
+    },
+    success: function(a,b,c){            
+      var blobData = a;
+      var blob_url = window.URL.createObjectURL(a);
+      $('#img02').attr("src", blob_url);      
+      $('#aa02').attr("href", blob_url);
+      $('#aa02').attr("download", 'download.jpg');
+      //$('#aa02').trigger("click");
+      $('#aa02')[0].click();
+      //
+    }
+  });
+
+*/
+
+/*
+
+*/
+</script>
+
+</head>
+<body>
+<a id="aa01" href="">下載</a><span id="poi200129"></span>
+<br>
+<img id="img01">
+<img id="img02">
+
+
+</body>
+</html>
