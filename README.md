@@ -24,4 +24,11 @@
 きしゅりゅうりたん
 
 # the Master and Father, the first before all, the maker of that god who first came into being
-the Lord, the Father and god from the only first god, the Creator
+至高之主、至上的父、先於一切而存在、一切神的造就者
+
+# 天國近了，你們應當悔改！
+馬太福音3:2
+
+# 人子得榮耀的時候到了。
+約翰福音 12:23 
+
