@@ -22,3 +22,6 @@
 
 # 貴種流離譚
 きしゅりゅうりたん
+
+# the Master and Father, the first before all, the maker of that god who first came into being
+the Lord, the Father and god from the only first god, the Creator
