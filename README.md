@@ -35,8 +35,15 @@
 # 上帝的勝利近在眼前 
 time is up 
 
+
+
+
 # 為了被遺忘的神祇們的垂憐經
 忘れられた神々のためのキリエ
 Kyrie Eleison
 
 <img src="https://user-images.githubusercontent.com/4385327/277664448-d02173b8-df8f-4c4e-9a16-9e86e07dfc25.jpg" width="640">
+
+# 你是遙遠過去與我們失散的公主
+あなたは遠い昔に離ればなりになってしまった私たちの姫です
+<img src="https://user-images.githubusercontent.com/4385327/277862212-5d6c6dcb-8c63-4b05-84a9-3ca0765596ad.jpg" width="640">
